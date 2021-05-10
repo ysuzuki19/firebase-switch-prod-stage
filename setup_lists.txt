@@ -1,0 +1,31 @@
+# initialize firebase project
+firebase init
+
+# check Channel ID and URL (is it exactry stage?)
+firebase hosting:channel:list
+
+# check staging
+npm run stage
+
+# add another project (with alias production)
+firebase use --add
+# add another project (with alias staging)
+firebase use --add
+
+# check Channel ID and URL (is it production?)
+firebase hosting:channel:list
+
+# use other project
+firebase use default
+
+
+firebase hosting:channel:open live -P default
+firebase hosting:channel:open live -P staging
+firebase hosting:channel:open live -P production
+
+# install cli-confirm (optional)
+npm install --save-dev cli-confirm
+
+# check staging and deploy
+npm run stage
+npm run deploy

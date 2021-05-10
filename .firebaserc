@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "firenv-stage",
+    "production": "firenv-prod",
+    "staging": "firenv-stage"
+  }
+}
